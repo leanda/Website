@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="600" viewBox="0 0 600 600">
+  <rect width="600" height="600" fill="#E8E6E1"/>
+  <g transform="translate(300,280)" fill="none" stroke="#B8B5AD" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="0" cy="-4" r="24"/>
+    <circle cx="0" cy="-4" r="10"/>
+    <line x1="0" y1="6" x2="0" y2="24"/>
+  </g>
+  <text x="300" y="330" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#B8B5AD">Detail view</text>
+</svg>

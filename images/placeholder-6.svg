@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
+  <rect width="800" height="600" fill="#E8E6E1"/>
+  <g transform="translate(400,280)" fill="none" stroke="#B8B5AD" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M-16,-24 L-24,-8 L-16,8 L-8,-8 Z"/>
+    <path d="M0,-24 L-8,-8 L0,8 L8,-8 Z"/>
+    <path d="M16,-24 L8,-8 L16,8 L24,-8 Z"/>
+    <line x1="-20" y1="16" x2="20" y2="16"/>
+  </g>
+  <text x="400" y="330" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#B8B5AD">Project Six</text>
+</svg>
