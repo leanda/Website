@@ -353,3 +353,105 @@
 .footer-links a:hover {
   color: var(--color-accent);
 }
+
+/* --- Back link --- */
+.back-link {
+  display: inline-block;
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-lg);
+  transition: color var(--transition-fast);
+}
+
+.back-link:hover {
+  color: var(--color-accent);
+}
+
+/* --- Project detail --- */
+.project-title {
+  margin-bottom: var(--space-xs);
+}
+
+.project-meta {
+  margin-bottom: var(--space-lg);
+}
+
+.project-description {
+  max-width: var(--max-width-text);
+}
+
+.project-image {
+  margin-bottom: var(--space-lg);
+}
+
+.project-image img {
+  width: 100%;
+  border-radius: 4px;
+  background: var(--color-bg-alt);
+}
+
+.project-image-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-lg);
+  margin-bottom: var(--space-lg);
+}
+
+@media (min-width: 640px) {
+  .project-image-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* --- About layout --- */
+.about-layout {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+@media (min-width: 640px) {
+  .about-layout {
+    flex-direction: row;
+    gap: var(--space-xl);
+  }
+}
+
+.about-photo {
+  flex-shrink: 0;
+}
+
+.about-photo img {
+  width: 100%;
+  max-width: 280px;
+  border-radius: 4px;
+  background: var(--color-bg-alt);
+}
+
+.about-bio {
+  max-width: var(--max-width-text);
+}
+
+.about-bio p + p {
+  margin-top: var(--space-md);
+}
+
+/* --- Social links --- */
+.social-links {
+  display: flex;
+  gap: var(--space-md);
+  flex-wrap: wrap;
+  margin-top: var(--space-md);
+}
+
+/* --- Missive image --- */
+.missive-image {
+  margin-bottom: var(--space-sm);
+}
+
+.missive-image img {
+  width: 100%;
+  max-width: 32rem;
+  border-radius: 4px;
+  background: var(--color-bg-alt);
+}

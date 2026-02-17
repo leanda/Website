@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About — Leanda Ryan</title>
+  <meta name="description" content="About Leanda Ryan — UI and visual designer.">
+  <link rel="stylesheet" href="/css/style.css">
+  <script>
+    (function() {
+      var theme = localStorage.getItem('theme');
+      if (theme === 'dark' || (!theme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+      }
+    })();
+  </script>
+</head>
+<body>
+
+  <a href="#main" class="skip-link">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container">
+      <p class="site-title"><a href="/">Leanda Ryan</a></p>
+
+      <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle navigation">
+        <svg class="icon-menu" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        <svg class="icon-close" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+
+      <nav class="site-nav" id="site-nav" aria-label="Main navigation">
+        <ul class="nav-list">
+          <li><a href="/portfolio/" class="nav-link">Portfolio</a></li>
+          <li><a href="/missives/" class="nav-link">Missives</a></li>
+          <li><a href="/about/" class="nav-link" aria-current="page">About</a></li>
+        </ul>
+      </nav>
+
+      <button class="theme-toggle" aria-label="Toggle dark mode">
+        <span class="icon-moon" aria-hidden="true">&#9789;</span>
+        <span class="icon-sun" aria-hidden="true">&#9788;</span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <section class="section fade-in">
+      <div class="container">
+        <h1>About</h1>
+      </div>
+    </section>
+
+    <section class="section fade-in" style="padding-top: 0;">
+      <div class="container">
+        <div class="about-layout">
+          <div class="about-photo">
+            <img src="" alt="Leanda Ryan" loading="lazy">
+          </div>
+          <div class="about-bio">
+            <p>Placeholder bio text. A few paragraphs about Leanda, her background, interests, and design philosophy. This text will be replaced with the real thing.</p>
+            <p>A second paragraph expanding on approach to design, influences, and what drives the work. Thoughtful, concise, and personal.</p>
+            <p>A final short paragraph — perhaps about life outside design, or a simple philosophy statement.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section fade-in" style="padding-top: 0;">
+      <div class="container">
+        <p class="section-label">Get in Touch</p>
+
+        <div style="max-width: var(--max-width-text);">
+          <p class="text-lg"><a href="mailto:hello@leandaryan.com">hello@leandaryan.com</a></p>
+
+          <div class="social-links">
+            <a href="#">Twitter</a>
+            <a href="#">Instagram</a>
+            <a href="#">LinkedIn</a>
+            <a href="#">Dribbble</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2026 Leanda Ryan</p>
+      <div class="footer-links">
+        <a href="#">Twitter</a>
+        <a href="#">Instagram</a>
+        <a href="#">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/main.js"></script>
+</body>
+</html>

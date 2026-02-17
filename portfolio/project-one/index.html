@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project One — Leanda Ryan</title>
+  <meta name="description" content="UI design project by Leanda Ryan.">
+  <link rel="stylesheet" href="/css/style.css">
+  <script>
+    (function() {
+      var theme = localStorage.getItem('theme');
+      if (theme === 'dark' || (!theme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+      }
+    })();
+  </script>
+</head>
+<body>
+
+  <a href="#main" class="skip-link">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container">
+      <p class="site-title"><a href="/">Leanda Ryan</a></p>
+
+      <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle navigation">
+        <svg class="icon-menu" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        <svg class="icon-close" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+
+      <nav class="site-nav" id="site-nav" aria-label="Main navigation">
+        <ul class="nav-list">
+          <li><a href="/portfolio/" class="nav-link" aria-current="page">Portfolio</a></li>
+          <li><a href="/missives/" class="nav-link">Missives</a></li>
+          <li><a href="/about/" class="nav-link">About</a></li>
+        </ul>
+      </nav>
+
+      <button class="theme-toggle" aria-label="Toggle dark mode">
+        <span class="icon-moon" aria-hidden="true">&#9789;</span>
+        <span class="icon-sun" aria-hidden="true">&#9788;</span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <section class="section fade-in">
+      <div class="container">
+        <a href="/portfolio/" class="back-link">&larr; Back to portfolio</a>
+
+        <h1 class="project-title">Project One</h1>
+        <p class="project-meta text-muted">UI Design &middot; 2025</p>
+
+        <div class="project-description">
+          <p class="text-lg">A short description of the project and what was involved. This is placeholder text that will be replaced with real project details.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section fade-in" style="padding-top: 0;">
+      <div class="container">
+        <!-- Full-width image -->
+        <div class="project-image project-image--full">
+          <img src="" alt="Project One — full width view" loading="lazy">
+        </div>
+
+        <!-- Two-column images -->
+        <div class="project-image-grid">
+          <div class="project-image">
+            <img src="" alt="Project One — detail view 1" loading="lazy">
+          </div>
+          <div class="project-image">
+            <img src="" alt="Project One — detail view 2" loading="lazy">
+          </div>
+        </div>
+
+        <!-- Another full-width image -->
+        <div class="project-image project-image--full">
+          <img src="" alt="Project One — additional view" loading="lazy">
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2026 Leanda Ryan</p>
+      <div class="footer-links">
+        <a href="#">Twitter</a>
+        <a href="#">Instagram</a>
+        <a href="#">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/main.js"></script>
+</body>
+</html>
