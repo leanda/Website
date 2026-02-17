@@ -68,6 +68,7 @@
   justify-content: center;
   width: 2.5rem;
   height: 2.5rem;
+  margin-left: auto;
   background: none;
   border: none;
   cursor: pointer;
