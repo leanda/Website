@@ -44,7 +44,7 @@ Website/
 │   ├── portfolio/                    # Project images
 │   └── missives/                     # Optional blog images
 ├── js/
-│   └── main.js                       # Dark/light mode toggle only
+│   └── main.js                       # Dark/light mode toggle + scroll fade-in observer
 ├── favicon.ico
 ├── CLAUDE.md
 ├── PLAN.md                           # This file
@@ -117,6 +117,31 @@ Based on 0.5rem (8px) increments:
 - **Body text max-width**: 38rem (~65 characters per line for readability)
 - **Mobile-first** using `min-width` breakpoints only: 640px, 1024px (never use `max-width`)
 - **Generous whitespace** — let the content breathe
+
+### Animations
+
+All animations are CSS-only, subtle, and respect `prefers-reduced-motion`.
+
+**Fade-in on scroll** (sections):
+- Each `<section>` starts with `opacity: 0; transform: translateY(1rem)` and transitions to visible when scrolled into view
+- Use `IntersectionObserver` in `main.js` to add a `.visible` class when a section enters the viewport
+- Transition: `opacity 0.6s ease, transform 0.6s ease`
+- Stagger child elements by 100ms where appropriate (e.g. portfolio grid cards)
+
+**Hover transitions** (cards and links):
+- Portfolio cards: `transform: translateY(-4px)` + subtle `box-shadow` on hover, `transition: transform 0.2s ease, box-shadow 0.2s ease`
+- Nav links and text links: accent colour underline slides in via `background-size` transition, `transition: background-size 0.2s ease`
+- Missive entries: background shifts to `var(--color-bg-alt)` on hover, `transition: background-color 0.2s ease`
+
+**Reduced motion**:
+```css
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+```
 
 ---
 
@@ -334,11 +359,12 @@ Based on 0.5rem (8px) increments:
 10. About page with placeholder bio
 
 ### Phase 3: Polish
-11. Hover states + micro-interactions (CSS only)
-12. Image lazy loading (native `loading="lazy"`)
-13. Favicon + meta tags + Open Graph tags
-14. Print styles (optional)
-15. Accessibility review (semantic HTML, focus states, skip links, ARIA where needed)
+11. Hover transitions (cards, links, missive entries)
+12. Scroll fade-in animations (IntersectionObserver + CSS transitions)
+13. Image lazy loading (native `loading="lazy"`)
+14. Favicon + meta tags + Open Graph tags
+15. Print styles (optional)
+16. Accessibility review (semantic HTML, focus states, skip links, ARIA where needed, `prefers-reduced-motion`)
 
 ---
 
@@ -349,7 +375,7 @@ Based on 0.5rem (8px) increments:
 | No build system | Static HTML/CSS/JS | Simplicity, zero dependencies, easy to host anywhere |
 | No CSS framework | Custom CSS with tokens | Full control, matches design vision, no bloat |
 | CSS custom properties | For theming + consistency | Native, no preprocessor needed, enables dark mode |
-| Minimal JS | Dark mode toggle only | Progressive enhancement — site works without JS |
+| Minimal JS | Dark mode toggle + IntersectionObserver for scroll fade-in | Progressive enhancement — site works without JS (content visible by default, animations are layered on) |
 | Directory-based URLs | `/portfolio/index.html` → `/portfolio/` | Clean URLs without server config |
 | Semantic HTML | `<header>`, `<nav>`, `<main>`, `<article>`, `<footer>` | Accessibility, SEO, future-proof |
 | `min-width` breakpoints only | `@media (min-width: 640px)`, `@media (min-width: 1024px)` | True mobile-first — base styles are mobile, layer up for larger screens. Never use `max-width` media queries |
@@ -363,7 +389,7 @@ Based on 0.5rem (8px) increments:
 - **Markdown for Missives** — could use a build step to convert `.md` files to HTML
 - **RSS feed** for Missives — simple to add later
 - **Project filtering** on portfolio grid (by category)
-- **Transition animations** between pages (View Transitions API)
+- **Page transition animations** between pages (View Transitions API)
 
 ---
 
