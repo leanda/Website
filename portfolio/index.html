@@ -6,6 +6,7 @@
   <title>Portfolio — Leanda Ryan</title>
   <meta name="description" content="Selected UI and visual design work by Leanda Ryan.">
   <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer">
   <script>
     (function() {
       var theme = localStorage.getItem('theme');
@@ -24,8 +25,8 @@
       <p class="site-title"><a href="../">Leanda Ryan</a></p>
 
       <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle navigation">
-        <svg class="icon-menu" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
-        <svg class="icon-close" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        <i class="fa-solid fa-bars icon-menu" aria-hidden="true"></i>
+        <i class="fa-solid fa-xmark icon-close" aria-hidden="true"></i>
       </button>
 
       <nav class="site-nav" id="site-nav" aria-label="Main navigation">
@@ -37,8 +38,8 @@
       </nav>
 
       <button class="theme-toggle" aria-label="Toggle dark mode">
-        <span class="icon-moon" aria-hidden="true">&#9789;</span>
-        <span class="icon-sun" aria-hidden="true">&#9788;</span>
+        <i class="fa-regular fa-moon icon-moon" aria-hidden="true"></i>
+        <i class="fa-regular fa-sun icon-sun" aria-hidden="true"></i>
       </button>
     </div>
   </header>
@@ -113,9 +114,9 @@
     <div class="container">
       <p>&copy; 2026 Leanda Ryan</p>
       <div class="footer-links">
-        <a href="#">Twitter</a>
-        <a href="#">Instagram</a>
-        <a href="#">LinkedIn</a>
+        <a href="#" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
       </div>
     </div>
   </footer>

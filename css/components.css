@@ -73,9 +73,8 @@
   color: var(--color-text);
 }
 
-.nav-toggle svg {
-  width: 1.5rem;
-  height: 1.5rem;
+.nav-toggle i {
+  font-size: 1.25rem;
 }
 
 .nav-toggle[aria-expanded="true"] .icon-menu {
@@ -347,11 +346,24 @@
 
 .footer-links a {
   color: var(--color-text-muted);
+  font-size: 1.125rem;
   transition: color var(--transition-fast);
 }
 
 .footer-links a:hover {
   color: var(--color-accent);
+}
+
+/* --- Social links --- */
+.social-links {
+  display: flex;
+  gap: var(--space-md);
+  flex-wrap: wrap;
+  margin-top: var(--space-md);
+}
+
+.social-links a i {
+  margin-right: var(--space-xs);
 }
 
 /* --- Back link --- */
@@ -433,14 +445,6 @@
 }
 
 .about-bio p + p {
-  margin-top: var(--space-md);
-}
-
-/* --- Social links --- */
-.social-links {
-  display: flex;
-  gap: var(--space-md);
-  flex-wrap: wrap;
   margin-top: var(--space-md);
 }
 
