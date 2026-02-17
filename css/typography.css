@@ -1,0 +1,110 @@
+/* ============================================
+   Typography
+   @font-face declarations + type scale.
+   Using system fonts as placeholders until
+   K-Type webfonts (Keep Calm, Transport New)
+   are added.
+   ============================================ */
+
+/* --- @font-face placeholders ---
+   Replace these with the actual K-Type webfont
+   files once Leanda provides them.
+
+@font-face {
+  font-family: 'Keep Calm';
+  src: url('../fonts/KeepCalm-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Transport New';
+  src: url('../fonts/TransportNew-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+*/
+
+/* --- Font stacks --- */
+:root {
+  --font-heading: system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-body:    system-ui, -apple-system, 'Segoe UI', sans-serif;
+}
+
+/* --- Type scale (perfect fourth — 1.333) --- */
+:root {
+  --text-sm:      0.75rem;   /* Captions, dates, meta */
+  --text-base:    1rem;      /* Body text (16px) */
+  --text-lg:      1.333rem;  /* Large body, intro */
+  --text-xl:      1.777rem;  /* Section headings (h3) */
+  --text-2xl:     2.369rem;  /* Page headings (h2) */
+  --text-3xl:     3.157rem;  /* Hero headings (h1) */
+  --text-display: 4.209rem;  /* Display / home hero */
+}
+
+/* --- Base typography --- */
+body {
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  color: var(--color-text);
+  background-color: var(--color-bg);
+  transition: background-color var(--transition-fast), color var(--transition-fast);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: 500;
+  color: var(--color-text);
+}
+
+h1 { font-size: var(--text-3xl); }
+h2 { font-size: var(--text-2xl); }
+h3 { font-size: var(--text-xl); }
+
+/* Scale down headings on mobile */
+h1 { font-size: var(--text-2xl); }
+
+@media (min-width: 640px) {
+  h1 { font-size: var(--text-3xl); }
+}
+
+@media (min-width: 1024px) {
+  h1 { font-size: var(--text-3xl); }
+}
+
+.text-display {
+  font-family: var(--font-heading);
+  font-size: var(--text-3xl);
+  font-weight: 500;
+  line-height: 1.1;
+}
+
+@media (min-width: 640px) {
+  .text-display {
+    font-size: var(--text-display);
+  }
+}
+
+.text-muted {
+  color: var(--color-text-muted);
+  font-size: var(--text-sm);
+}
+
+.text-lg {
+  font-size: var(--text-lg);
+}
+
+a:not(.nav-link) {
+  color: var(--color-accent);
+  background-image: linear-gradient(var(--color-accent), var(--color-accent));
+  background-size: 0% 1px;
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  transition: background-size var(--transition-fast);
+}
+
+a:not(.nav-link):hover {
+  background-size: 100% 1px;
+}
