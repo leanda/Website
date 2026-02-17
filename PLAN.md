@@ -115,7 +115,7 @@ Based on 0.5rem (8px) increments:
 - **Max content width**: 72rem (1152px)
 - **Portfolio grid**: CSS Grid, responsive columns — `repeat(auto-fill, minmax(320px, 1fr))`
 - **Body text max-width**: 38rem (~65 characters per line for readability)
-- **Mobile-first** breakpoints: 640px, 1024px
+- **Mobile-first** using `min-width` breakpoints only: 640px, 1024px (never use `max-width`)
 - **Generous whitespace** — let the content breathe
 
 ---
@@ -352,6 +352,7 @@ Based on 0.5rem (8px) increments:
 | Minimal JS | Dark mode toggle only | Progressive enhancement — site works without JS |
 | Directory-based URLs | `/portfolio/index.html` → `/portfolio/` | Clean URLs without server config |
 | Semantic HTML | `<header>`, `<nav>`, `<main>`, `<article>`, `<footer>` | Accessibility, SEO, future-proof |
+| `min-width` breakpoints only | `@media (min-width: 640px)`, `@media (min-width: 1024px)` | True mobile-first — base styles are mobile, layer up for larger screens. Never use `max-width` media queries |
 | System font fallbacks | `system-ui, sans-serif` | Good experience before webfonts load |
 
 ---
