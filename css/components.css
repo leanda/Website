@@ -179,13 +179,6 @@
   color: var(--color-accent);
 }
 
-/* Icon visibility controlled by data-theme */
-.theme-toggle .icon-sun  { display: none; }
-.theme-toggle .icon-moon { display: block; }
-
-[data-theme="dark"] .theme-toggle .icon-sun  { display: block; }
-[data-theme="dark"] .theme-toggle .icon-moon { display: none; }
-
 /* --- Section --- */
 .section {
   padding-block: var(--space-xl);
