@@ -2,14 +2,31 @@
 
 ## Project Overview
 
-Personal website. This repository is in its initial scaffolding phase — no framework, build system, or source code has been set up yet.
+Personal website built with [Eleventy (11ty)](https://www.11ty.dev/) using Nunjucks templates.
 
 ## Repository Structure
 
 ```
 Website/
-├── CLAUDE.md        # This file — AI assistant guidelines
-└── README.md        # Project description
+├── src/                          # Source files (Eleventy input)
+│   ├── _includes/
+│   │   ├── base.njk              # Base HTML layout
+│   │   └── partials/
+│   │       ├── header.njk        # Shared site header + nav
+│   │       └── footer.njk        # Shared site footer
+│   ├── css/                      # Stylesheets (passthrough copy)
+│   ├── js/                       # JavaScript (passthrough copy)
+│   ├── images/                   # Images (passthrough copy)
+│   ├── index.njk                 # Homepage
+│   ├── about/index.njk           # About page
+│   ├── portfolio/index.njk       # Portfolio listing
+│   ├── portfolio/project-one/    # Individual project pages
+│   └── missives/index.njk        # Missives page
+├── _site/                        # Built output (git-ignored)
+├── eleventy.config.js            # Eleventy configuration
+├── package.json
+├── CLAUDE.md
+└── README.md
 ```
 
 ## Git Workflow
@@ -21,13 +38,9 @@ Website/
 
 ## Development Setup
 
-No build system or dependencies are configured yet. When the project is set up:
-
-- Update this section with install commands (e.g., `npm install`)
-- Document the dev server command (e.g., `npm run dev`)
-- Document the build command (e.g., `npm run build`)
-- Document the test command (e.g., `npm test`)
-- Document the lint command (e.g., `npm run lint`)
+- **Install dependencies**: `npm install`
+- **Dev server** (with live reload): `npm run dev`
+- **Production build**: `npm run build` (outputs to `_site/`)
 
 ## Conventions
 
