@@ -1,0 +1,69 @@
+---
+layout: base.njk
+title: "Leanda Ryan — Designer. Tinkerer. Builder."
+description: "I work at the intersection of design and technology, consulting, planning, designing and building things that are bespoke, considered, and made to last."
+ogType: website
+twitterCard: true
+permalink: /
+---
+
+    <!-- Hero -->
+    <section class="section fade-in">
+      <div class="container">
+        <p class="text-display">Designer. Tinkerer. Builder.</p>
+        <p class="text-lg" style="max-width: var(--max-width-text);">I'm Leanda — a designer with thirty years of experience and a lifelong habit of taking things apart to see how they work. I started with a ZX81 my dad brought home in a supermarket bag, went to art school, taught myself to code, and somewhere along the way built a software company that someone else eventually wanted to buy. I work at the intersection of design and technology, consulting, planning, designing and building things that are bespoke, considered, and made to last. If you're looking for someone who genuinely understands both sides, let's talk.</p>
+      </div>
+    </section>
+
+    <!-- Selected work -->
+    <section class="section fade-in">
+      <div class="container">
+        <p class="section-label">Selected Work</p>
+
+        <div class="portfolio-grid fade-in-stagger">
+          <a href="{{ '/portfolio/project-one/' | url }}" class="portfolio-card fade-in">
+            <img src="{{ '/images/placeholder-1.svg' | url }}" alt="Project One thumbnail" loading="lazy">
+            <div class="portfolio-card-info">
+              <p class="portfolio-card-title">Project One</p>
+              <p class="portfolio-card-category">UI Design</p>
+            </div>
+          </a>
+          <a href="{{ '/portfolio/project-two/' | url }}" class="portfolio-card fade-in">
+            <img src="{{ '/images/placeholder-2.svg' | url }}" alt="Project Two thumbnail" loading="lazy">
+            <div class="portfolio-card-info">
+              <p class="portfolio-card-title">Project Two</p>
+              <p class="portfolio-card-category">Visual Design</p>
+            </div>
+          </a>
+          <a href="{{ '/portfolio/project-three/' | url }}" class="portfolio-card fade-in">
+            <img src="{{ '/images/placeholder-3.svg' | url }}" alt="Project Three thumbnail" loading="lazy">
+            <div class="portfolio-card-info">
+              <p class="portfolio-card-title">Project Three</p>
+              <p class="portfolio-card-category">Graphic Design</p>
+            </div>
+          </a>
+        </div>
+
+        <a href="{{ '/portfolio/' | url }}" class="view-all">View all work <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+    </section>
+
+    <!-- Missives -->
+    <section class="section fade-in">
+      <div class="container">
+        <p class="section-label">Missives</p>
+
+        <div style="max-width: var(--max-width-text);">
+          <article class="missive-entry">
+            <p>A short thought about design that captures a moment of observation or reflection.</p>
+            <p class="missive-date"><time datetime="2026-02-12">12 Feb 2026</time></p>
+          </article>
+          <article class="missive-entry">
+            <p>Another brief observation about the web, typography, or the creative process.</p>
+            <p class="missive-date"><time datetime="2026-02-08">08 Feb 2026</time></p>
+          </article>
+        </div>
+
+        <a href="{{ '/missives/' | url }}" class="view-all">All missives <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+    </section>

@@ -1,0 +1,43 @@
+/* ============================================
+   Design Tokens
+   All colours, spacing, and layout values as
+   CSS custom properties.
+   ============================================ */
+
+:root {
+  /* --- Colour: Light mode (default) --- */
+  --color-bg:          #FAFAF8;
+  --color-bg-alt:      #F0EFEC;
+  --color-text:        #1A1A1A;
+  --color-text-muted:  #6B6B6B;
+  --color-accent:      #D6338A;
+  --color-accent-soft: rgba(214, 51, 138, 0.1);
+  --color-border:      #E0DFDC;
+
+  /* --- Spacing (8px base) --- */
+  --space-xs:  0.25rem;  /*  4px */
+  --space-sm:  0.5rem;   /*  8px */
+  --space-md:  1rem;     /* 16px */
+  --space-lg:  2rem;     /* 32px */
+  --space-xl:  4rem;     /* 64px */
+  --space-2xl: 8rem;     /* 128px */
+
+  /* --- Layout --- */
+  --max-width:      72rem;   /* 1152px */
+  --max-width-text: 38rem;   /* ~65 chars */
+
+  /* --- Transitions --- */
+  --transition-fast: 0.2s ease;
+  --transition-base: 0.6s ease;
+}
+
+/* --- Colour: Dark mode --- */
+[data-theme="dark"] {
+  --color-bg:          #141413;
+  --color-bg-alt:      #1E1E1C;
+  --color-text:        #EAEAE8;
+  --color-text-muted:  #8A8A88;
+  --color-accent:      #E85DA4;
+  --color-accent-soft: rgba(232, 93, 164, 0.1);
+  --color-border:      #2A2A28;
+}

@@ -1,0 +1,97 @@
+/* ============================================
+   Typography
+   Bold, condensed, uppercase heading style
+   inspired by hellomuller.com's modernist
+   typographic approach.
+
+   Heading: Oswald (condensed, bold, uppercase)
+   Body:    Inter (clean grotesque)
+   ============================================ */
+
+/* --- Font stacks --- */
+:root {
+  --font-heading: 'Oswald', system-ui, sans-serif;
+  --font-body:    'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+}
+
+/* --- Type scale (major third — 1.25) --- */
+:root {
+  --text-sm:      0.75rem;   /* Captions, dates, meta */
+  --text-base:    1rem;      /* Body text (16px) */
+  --text-lg:      1.25rem;   /* Large body, intro */
+  --text-xl:      1.563rem;  /* Section headings (h3) */
+  --text-2xl:     1.953rem;  /* Page headings (h2) */
+  --text-3xl:     2.441rem;  /* Hero headings (h1) */
+  --text-display: 3.815rem;  /* Display / home hero */
+}
+
+/* --- Base typography --- */
+body {
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  line-height: 1.6;
+  color: var(--color-text);
+  background-color: var(--color-bg);
+  transition: background-color var(--transition-fast), color var(--transition-fast);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  line-height: 1.1;
+  color: var(--color-text);
+}
+
+h1 { font-size: var(--text-3xl); }
+h2 { font-size: var(--text-2xl); }
+h3 { font-size: var(--text-xl); }
+
+/* Scale down headings on mobile */
+h1 { font-size: var(--text-2xl); }
+
+@media (min-width: 640px) {
+  h1 { font-size: var(--text-3xl); }
+}
+
+@media (min-width: 1024px) {
+  h1 { font-size: var(--text-3xl); }
+}
+
+.text-display {
+  font-family: var(--font-heading);
+  font-size: var(--text-3xl);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: -0.01em;
+  line-height: 1.05;
+}
+
+@media (min-width: 640px) {
+  .text-display {
+    font-size: var(--text-display);
+  }
+}
+
+.text-muted {
+  color: var(--color-text-muted);
+  font-size: var(--text-sm);
+}
+
+.text-lg {
+  font-size: var(--text-lg);
+}
+
+a:not(.nav-link) {
+  color: var(--color-accent);
+  background-image: linear-gradient(var(--color-accent), var(--color-accent));
+  background-size: 0% 1px;
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  transition: background-size var(--transition-fast);
+}
+
+a:not(.nav-link):hover {
+  background-size: 100% 1px;
+}
