@@ -1,9 +1,8 @@
 module.exports = function (eleventyConfig) {
   // Static assets — copied straight to _site/
-  eleventyConfig.addPassthroughCopy('css');
-  eleventyConfig.addPassthroughCopy('js');
-  eleventyConfig.addPassthroughCopy('images');
-  eleventyConfig.addPassthroughCopy('favicon.ico');
+  eleventyConfig.addPassthroughCopy('src/css');
+  eleventyConfig.addPassthroughCopy('src/js');
+  eleventyConfig.addPassthroughCopy('src/images');
 
   return {
     pathPrefix: '/Website/',
